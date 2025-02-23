@@ -2,6 +2,7 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { TransferList } from './components/TransferList';
 import { useTransfer } from './hooks/useTransfer';
 
@@ -27,10 +28,11 @@ export const App = () => {
             transfers.length > 0
                ? <TransferList />
                : (<>
-                  <p className="text-center text-2xl mt-10 font-bold">
+                  <Link to="/new-transfer"
+                     className="text-center text-2xl mt-10 font-bold absolute w-full">
                      No hay Traslados Registrados {''}
                      <a className="text-indigo-700">Crea uno</a>
-                  </p>
+                  </Link>
                </>
                )
          }
