@@ -4,7 +4,7 @@ import { useAuth } from "../hooks/useAuth";
 
 export const Authenticate = () => {
 
-   const { startGerUser, passOk } = useAuth();
+   const { startGerUser } = useAuth();
 
    useEffect(() => {
       startGerUser();
